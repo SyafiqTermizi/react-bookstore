@@ -1,0 +1,18 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+ipython = "*"
+factory-boy = "*"
+
+[packages]
+django = "*"
+djangorestframework = "*"
+psycopg2 = "*"
+django-webpack-loader = "*"
+django-filter = "*"
+
+[requires]
+python_version = "3.7"

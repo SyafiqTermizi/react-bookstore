@@ -1,0 +1,23 @@
+version: '3'
+services:
+
+  book_db:
+    image: postgres:11-alpine
+    env_file:
+      - ../.env
+    ports:
+      - 5400:5432
+
+  book_app:
+    build:
+      context: ../
+      dockerfile: ./docker/Dockerfile
+    depends_on:
+      - book_db
+    volumes:
+      - ..:/app
+    env_file:
+      - ../.env
+    ports:
+      - "8000:80"
+    command: /start

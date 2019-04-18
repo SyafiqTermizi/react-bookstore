@@ -1,0 +1,9 @@
+@import "~bootstrap/scss/bootstrap";
+
+
+.card-header-white {
+    @extend .card-header;
+    background-color: white;
+    border-right: none;
+    border-left: none;
+}
